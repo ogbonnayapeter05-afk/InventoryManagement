@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
-    price: { type: String, required: true },
-    quantity: { type: String, default: 0 },
+    price: { type: Number, required: true },
+    quantity: { type: Number, default: 0 },
   }, { timestamps: true });
 
 module.exports = mongoose.model("Product", productSchema);
